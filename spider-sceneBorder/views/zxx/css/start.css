@@ -1,0 +1,102 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	background-size: cover;
+}
+.pro_city{
+	color: white;
+	margin-left: 5%;
+}
+.pro_city select{
+	appearance:none;  
+    -moz-appearance:none;  
+    -webkit-appearance:none;
+    margin-top: 20px;
+	width: 150px;
+	height: 35px;
+	font-size: 90%;
+	border-radius: 10px;
+	padding-left: 50px;
+	color: burlywood;
+	background-color: black;
+	
+}		
+option::-ms-expand{ display: none; }
+option{
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari 和 Chrome */
+    appearance:none;
+}
+/* --背景色字体颜色--*/
+option:hover{
+    color:#fff;
+    background-color:#1E90FF;
+}
+#selectbut{
+	background-color: lightblue;
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 80px;
+	height: 35px;
+	color: black;
+	border-radius: 10px;
+}
+#resetbutton{
+	background-color: darkred;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 80px;
+	height: 35px;
+	color: white;
+	border-radius: 10px;
+	
+}
+
+#inter{
+	height: 80%;
+	width: 70%;
+	background-color: darkgray;
+	margin-top: 20px;
+}
+#topf{
+	color: wheat;
+	height: 80px;
+	padding-left: 2%;
+	padding-top: 10px;
+	font-size: small;
+	
+}
+#footer{
+	background-color: #000000;
+	position:fixed; 
+	width: 100%;
+	bottom:0; 
+	text-align: center;
+	color: wheat;
+}
+#fra{
+	width: 90%;
+	height: 370px;
+	background-color: #C1CDC1;
+	margin-top: 20px;
+
+}
+.pro_city input{
+	margin-top: 20px;
+	margin-left: 5px;
+	padding-left: 5px;
+	width: 150px;
+	height: 30px;
+	font-size: 90%;
+	border-radius: 10px;
+	color: burlywood;
+	background-color: black;
+}
+
