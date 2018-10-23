@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="index.css" />
-   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kQCfNwYZ429f1S4PGfHEl9KoTbrUSvsV"></script>
-	<script type="text/javascript" src="http://api.map.baidu.com/library/CurveLine/1.5/src/CurveLine.min.js"></script>
-	
-</head>
-<body>
-<div style="width: 100%;">
-    <ul  class="menu_ul">
-        <li ><a href="map.html" target="iframe_a">
-        	<img src="../../static/images/menu_index.png"/>首页</a>
-        </li>
-        <li ><a href="../param_set/param_set.html" target="iframe_a">
-        	<img src="../../static/images/menu_set.png "/>爬虫配置</a></li>
-        <li ><a href="../poi_draw/poi_draw.html" target="iframe_a">
-        	<img src="../../static/images/menu_draw.png"/>画边框</a></li>
-        <li ><a href="https://www.baidu.com/" target="iframe_a">
-        	<img src="../../static/images/menu_data.png"/>数据处理</a></li>
-    </ul>
-     <div class="mineinfo">
-        		<p><img src="../../static/images/menu_mine.png "/>admin</p>
-        		<p>version:1.1.0</p>
-        	</div>
-</div>
-<iframe src="../index/map.html" name="iframe_a" frameborder="0" frameborder="1" width="100%" height="100%">
-    <div></div>
-</iframe>
-</body>
-<script type="text/javascript" src="../../static/jquery/jquery-1.8.3.min.js" ></script>
-<script src="../../static/echarts/echarts.js"></script>
-<script type="text/javascript" src="index.js" ></script>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="index.css" />
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kQCfNwYZ429f1S4PGfHEl9KoTbrUSvsV"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/library/CurveLine/1.5/src/CurveLine.min.js"></script>
+		<title>首页</title>
+	</head>
+
+	<body>
+		<div class="chart_modal">
+			<div class="modal_title">
+				<span>POI完整度</span>
+			</div>
+			<div class="chart" id="chart_1"></div>
+		</div>
+		<div class="chart_modal">
+			<div class="modal_title"><span>POI数量</span></div>
+			<div class="chart" id="chart_2"></div>
+		</div>
+		<div class="chart_modal">
+			<div class="modal_title"><span>POI点数量</span></div>
+			<div class="chart" id="chart_3"></div>
+		</div>
+		<div class="indexMap">
+			<div class="modal_title"><span>地图</span></div>
+			<div class="allmap" id="indexMap"></div>
+		</div>
+		<div class="chart_modal">
+			<div class="modal_title"><span>POI场景量</span></div>
+			<div class="chart" id="chart_4"></div>
+		</div>
+	</body>
+
 </html>
+<script type="text/javascript" src="../../static/jquery/jquery-1.8.3.min.js"></script>
+<script src="../../static/echarts/echarts.js"></script>
+<script type="text/javascript" src="index.js"></script>

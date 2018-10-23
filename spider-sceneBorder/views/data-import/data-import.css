@@ -1,0 +1,23 @@
+html,body{
+	height: 95%;
+	background: #F2F2F2;
+	width: 100%;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+.param_set{
+	margin: 2% 1%;
+	height: 26%;
+	width: 98%;
+	border: 1px solid black;
+	border-radius:10px;
+}
+.data_list{
+	height: 69%;
+	width: 98%;
+	margin: 0px 1%;
+	border: 1px solid black;
+	border-radius: 10px;
+}
