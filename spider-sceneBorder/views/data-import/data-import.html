@@ -3,16 +3,16 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>数据导出/title>
-		<link rel="stylesheet" href="data-import.css" />
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+		<title>数据导出</title>
+			<link rel="stylesheet" href="data-import.css" />
+			<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 	</head>
 
 	<body>
 		<div class="param_set">
 			<div class="param_select">
 				<span>时间:</span>
-				<input type="radio" checked="checked" id="today" name="choose-date" type="radio" value="today">
+				<input type="radio" id="today" name="choose-date" type="radio" value="today">
 				<label for='today'>今天</label>
 				<input type="radio" id="yesterday" name="choose-date" type="radio" value="yesterday">
 				<label for='yesterday'>昨天</label>
@@ -46,8 +46,8 @@
 					<input type="text" id="select_lat" placeholder="请输入" />
 					<span>纬度范围</span>
 					<input type="text" id="select_lon" placeholder="请输入" />
-					<button class="select_btn active">查询</button>
-					<button class="select_btn">重置</button>
+					<button id="selectBtn" class="select_btn">查询</button>
+					<button id="resetBtn" class="select_btn">重置</button>
 				</div>
 
 			</div>
@@ -56,7 +56,7 @@
 			<div class="list_head">
 				<span>信息列表</span>
 				<button class="select_btn">导出</button>
-				<button class="select_btn">选择位置</button>
+				<input type="file" id="select_Folder" webkitdirectory></input>
 			</div>
 			<table class="data_table" cellspacing="5">
 				<tr style="background: #eff0f4;">

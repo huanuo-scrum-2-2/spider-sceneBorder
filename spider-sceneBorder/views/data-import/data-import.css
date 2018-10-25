@@ -120,4 +120,6 @@ td {
 	border-bottom: 1px solid gainsboro;
 }
 
-input[type=checkbox] {}
+input[type=file] {
+	float: right;
+}
