@@ -18,6 +18,7 @@ body {
 	border-radius: 10px;
 	background-color: #fff;
 	padding: 10px;
+	font-size: 13px;
 }
 
 .data_list {
@@ -39,12 +40,13 @@ body {
 .param_select span {
 	margin-left: 10px;
 	margin-top: 20px;
+	font-size: 13px;
 }
 
 .param_select label {
 	border: 1px solid gainsboro;
 	border-radius: 5px;
-	padding: 0px 8px;
+	padding: 2px 8px;
 	margin-top: 5px;
 }
 
@@ -59,22 +61,36 @@ input[type=radio]:checked+label {
 	border-radius: 3px;
 	margin-top: 2px;
 	margin-left: 5px;
-	width: 200px;
+	width: 150px;
+}
+
+.param_select select {
+	padding: 1px 8px;
+	border: 1px solid gainsboro;
+	border-radius: 3px;
+	width: 100px;
+	margin-top:  2px;
 }
 
 .select_btn {
 	float: right;
 	margin: 0 40px 0 0;
-	padding: 2px 20px;
+	padding: 3px 20px;
 	border: 1px solid gainsboro;
 	background: white;
 	color: black;
 	border-radius: 3px;
 }
 
+.select_btn :hover {
+	background: blue;
+	color: white;
+}
+
 .data_table {
 	width: 98%;
-	margin-left: 1% font-family: MicrosoftYaHei;
+	margin-left: 1%;
+	font-family: MicrosoftYaHei;
 	font-size: 11px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -83,20 +99,25 @@ input[type=radio]:checked+label {
 	color: #222222;
 	text-align: center;
 }
-.list_head{
+
+.list_head {
 	padding: 10px;
 	height: 5%;
 }
+
+.city_select {
+	position: relative;
+	/* top: 40px; */
+}
+
 table {
 	border-collapse: collapse;
 	width: 98%;
 	margin-left: 1%;
-	
 }
 
 td {
 	border-bottom: 1px solid gainsboro;
 }
 
-input[type=checkbox] {
-}
+input[type=checkbox] {}
