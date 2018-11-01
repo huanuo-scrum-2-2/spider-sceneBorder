@@ -1,42 +1,30 @@
 <!DOCTYPE html>
-<html >
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>用户登录</title>
---><link rel="stylesheet" href="login.css" />
+<html lang="en">
 
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<link rel="stylesheet" href="login.css" />
+	</head>
 
+	<body>
+		<div class="login_div">
+			<img class="login_img" src="../../static/images/login-img.png" />
+			<div class="login_right">
+				<img class="login_logo" src="../../static/images/login-logo.png" />
+				<div class="login_input ">
+					<input class="login_name" id="username" placeholder="用户名"/>
+				</div>
+				<div class="login_input">
+					<input class="login_psd" type="password" id="userpsd" placeholder="密码"/>
+				</div>
+				<button class="login_btn">登录</button>
+			</div>
+		</div>
+		<div class="login_rights">
+			<p>Copyright © 2018 敏捷小组2班技术支持</p>
+		</div>
 
+	</body>
 
-
-<!--<p class="center" style="display:block;text-align:center;">登录用户名为admin，密码为123456</p>
-<p class="center" style="display:block;text-align:center;">在用户名和密码错误时，点击登录按钮可以看到表单的摇晃效果。</p>-->
-<div id="wrapper" class="login-page">
- <div id="login_form" class="form">
-   <form class="register-form">
-     <input type="text" placeholder="用户名" id="r_user_name"/>
-     <input type="password" placeholder="密码" id="r_password" />
-     <input type="text" placeholder="电子邮件" id="r_emial"/>
-     <button id="create">创建账户</button>
-     <p class="message">已经有了一个账户? <a href="#">立刻登录</a></p>
-   </form>
-   <form class="login-form">
-     <div class="login_input">
-     	<i class="login_icon"></i>
-     	<input type="text" placeholder="用户名" id="user_name"/ >
-     </div>
-     <input type="password" placeholder="密码" id="password"/>
-     <button id="login" onclick="check_login()">登　录</button>
-     <p class="message">还没有账户? <a href="#">立刻创建</a></p>
-   </form>
- </div>
-</div>
-
-<script src="../../static/jquery/jquery-1.8.3.min.js"></script>
-</body>
-<script src="login.js"></script>
 </html>

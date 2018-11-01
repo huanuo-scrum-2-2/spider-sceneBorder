@@ -1,134 +1,51 @@
-body,
-html {
+html,body{
+	height: 90%;
+	background: #F2F2F2;
 	width: 100%;
-	height:94%;
-	margin: 0;
-	font-family: "Arial Unicode MS";
-	/*background-color: #daf1f6;*/
-background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#b8c4cb), to(#f6f6f8));/*谷歌*/	/*background-image: url(../../static/images/bg.jpg);*/
+	margin-top: 30px;
 }
 
-p{
-	margin: 0;
-	padding: 0;
-}
-.menu_ul{
-	background-color: #80C6c8;
-	height:70px;
-	width: 80%;
-	padding-left: 10%;
-	margin-top: 0px;
-	margin-bottom: 0px;
+.chart_modal{
+	background: white;
+	width: 31%;
+	height: 50%;
+	padding:0.5%;
+	margin: 0.5%;
 	float: left;
-}
- .menu_ul li{
- 	float: left;
-	width:20%;
-	height: 100%;
-	list-style-type:none;
 	border-radius: 20px;
-	text-align: center;
-	padding-top: 25px;
- }
-
- .menu_ul  :hover{
- 	/*background-color: #c8094f;*/
- }
-
-
-.menu_ul a{
-	text-decoration:none;
-	color: white;
-} 
-
-.menu_ul img{
-width: 25px;
-height: 25px;
-vertical-align: middle;
-margin-right: 10px;
 }
-
-.mineinfo{
-	height:70px;
-	line-height: 15px;
-	padding-top: 10px;
-	text-align: center;
-	color: white;
-	font-size: 18px;
-	background-color: #80C6c8;
-	position: absolute,top：0,right：0;
-}
-
-.mineinfo img{
-width: 25px;
-height: 25px;
-vertical-align: middle;
-margin-right: 10px;
-}
-.li_selected{
-	background-color: #cc0547;
-}
-
-
-#r-result {
-	width: 100%;
-}
-
-
-.left{
-	width: 20%;
-	height: 100%;
-	float: left;
-}
-
-.middel{
-	width: 50%;
-	height: 100%;
-	float: left;
-}
-.middel input{
-	width:100%;
-	height: 20%;
-	float: left;
-}
-
-#allmap {
-	height: 75%;
+.chart{
+	height: 90%;
 	width: 90%;
 	margin-left: 5%;
-	margin-bottom: 2%;
-		margin-top: 2%;
-	
 }
-
-.right{
-	width: 30%;
-	height: 100%;
+.indexMap{
+	width: 64%;
+	height: 50%;
+	padding:0.5%;
+	margin: 0.5%;
 	float: left;
+	border-radius: 20px;
+	background: white;
 }
-
-.right_top{
+.modal_title{
+	position: relative;
+	top:0px;
+	height: 8%;
 	width: 95%;
-	height: 33%;
+	margin-left: 2.5%;
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1px;
+	color: #222222;
+	border-bottom: 1px solid gainsboro;
 }
-.right_middle{
-	width: 95%;
-	height: 33%;
-	padding-top: 20px;
-}
-.right_buttom{
-	width: 95%;
-	height: 33%;
-	padding-top: 20px;
-}
-.right_buttom table{
-	width: 95%;
-	height: 100%;
-	text-align: center;
-	color: cornflowerblue;
-	border: 1px solid darkgray;
-}
-
-.right_buttom table th,td{
-	border-left: 1px solid darkgray;
+.allmap{
+	width: 98%;
+    height: 88%;
+    margin-left: 1%;
+    margin-top: 1%;
+    border-radius: 20px;
 }
