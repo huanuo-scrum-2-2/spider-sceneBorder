@@ -18,6 +18,7 @@ html {
 	color: white;
 	position: absolute;
 	min-width: 1536px;
+	line-height: 60px;
 }
 
 .index_logo {
@@ -36,11 +37,12 @@ html {
 	float: left;
 	width: 15%;
 	margin: 0 2%;
-	height:60px;
+	height: 56px;
 	list-style-type: none;
 	text-align: center;
 	/* padding-top: 25px; */
 	line-height: 60px;
+	/* padding-bottom: 5px; */
 }
 
 .menu_ul a {
@@ -49,7 +51,7 @@ html {
 }
 
 .selected {
-	border-bottom: 2px solid white;
+	border-bottom: 3px solid white;
 }
 
 .index_mine {

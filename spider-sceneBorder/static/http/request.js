@@ -2,7 +2,11 @@ var hostName = "http://sceneborder.imwork.net/"; //接口公共的ip或者域名
 //path里定义了所有的接口 
 var path = {
 	//登录
-	"login": hostName + "equipment/count",
+	"login": hostName + 'user_login_check',
+	//用户管理模块
+	//获取所有用户列表
+    "getUserInfo": hostName + 'get_user_info',
+
 	//首页左上角图表数据
 	//poi完整度
 	"getPoiIntegrityRate": hostName + 'get_poi_integrity_rate',

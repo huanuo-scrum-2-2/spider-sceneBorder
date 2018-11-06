@@ -51,6 +51,7 @@ body {
 	background-position: 15px 13px;
 	background-size: 13px 14px;
 	outline:none;
+
 }
 
 .login_name {
@@ -69,6 +70,7 @@ body {
 	height: 40px;
 	margin: 10% 0 0 10%;
 	color: white;
+	outline:none;
 }
 .login_rights{
 	position: absolute;
@@ -83,4 +85,5 @@ body {
 	line-height: 21px;
 	letter-spacing: 0px;
 	color: #ffffff;
+
 }
