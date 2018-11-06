@@ -30,3 +30,7 @@ th{
 	text-align: center;
 	background: lightgray;
 }
+.btn{
+	padding: 0px 10px;
+	margin: 0 5px;
+}

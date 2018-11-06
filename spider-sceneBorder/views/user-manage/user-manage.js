@@ -13,9 +13,28 @@ function  getUserList() {
                 '</td><td>' + data[i].role_priv_level +
                 '</td><td>' + data[i].login_time +
                 '</td><td>' + data[i].dept_name +
-                '</td><td>' + data[i].owner_prov + '</td>';
+                '</td><td>' + data[i].owner_prov +
+                '</td><td><button class="btn btn-primary" onclick="editUser('+data[i].user_id +
+                ')" >编辑</button><button class="btn btn-primary" onclick="deleteUser('+data[i].user_id +
+                ')" >删除</button>'
+
+            ;
             html += '</tr>';
         }
         $('#userTable').html(html);
     }, function(data) {});
+}
+
+function  editUser(id) {
+    $('#editModal').modal('show');
+
+
+}
+
+function deleteUser(id) {
+
+}
+
+function addUser() {
+    $('#editModal').modal('show');
 }
