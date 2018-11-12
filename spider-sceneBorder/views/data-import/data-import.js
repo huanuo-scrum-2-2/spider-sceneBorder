@@ -2,10 +2,6 @@ $(function() {
 	$("#datepicker").datepicker();
 });
 
-document.querySelector('#select_Folder').addEventListener('change', e => {
-  for (let entry of e.target.files)
-    console.log(entry.name, entry.webkitRelativePath);
-    
 $('#selectBtn').click(function() {
 	var selectDate = $("input[name='choose-date']:checked").val(); //获取选中的时间段
 	console.log(selectDate);

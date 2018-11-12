@@ -2,6 +2,7 @@ html,body{
 	height: 90%;
 	background: #F2F2F2;
 	width: 100%;
+	margin-top: 30px;
 }
 
 .chart_modal{
@@ -14,7 +15,7 @@ html,body{
 	border-radius: 20px;
 }
 .chart{
-	height: 88%;
+	height: 90%;
 	width: 90%;
 	margin-left: 5%;
 }
@@ -28,10 +29,9 @@ html,body{
 	background: white;
 }
 .modal_title{
-	padding-bottom: 5px;
 	position: relative;
 	top:0px;
-	height: 7%;
+	height: 8%;
 	width: 95%;
 	margin-left: 2.5%;
 	font-family: MicrosoftYaHei;
