@@ -17,6 +17,8 @@ function check_login() {
                 if (data.status == "true") {
                     sessionStorage.removeItem('role');
                     sessionStorage.setItem('user-role', data.role); // 将当前登录用户信息存入sessionStorage
+                    sessionStorage.removeItem('showName');
+                    sessionStorage.setItem('showName', data.show_name); // 将当前登录用户信息存入sessionStorage
                     window.location.href = '../main/main.html';  //页面跳转
                 } else {
                     alert(data.info);

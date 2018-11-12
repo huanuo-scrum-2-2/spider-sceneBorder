@@ -3,11 +3,17 @@ var hostName = "http://sceneborder.imwork.net/"; //接口公共的ip或者域名
 var path = {
 	//登录
 	"login": hostName + 'user_login_check',
+
 	//用户管理模块
 	//获取所有用户列表
     "getUserInfo": hostName + 'get_user_info',
+    "userLoginCheck": hostName + 'user_login_check',
+	//编辑用户信息
+    "updateUserInfo": hostName + 'update_user_info',
 
-	//首页左上角图表数据
+	//导出
+    "download": hostName + 'download',
+	//首页图表数据
 	//poi完整度
 	"getPoiIntegrityRate": hostName + 'get_poi_integrity_rate',
 	//Poi点数量
@@ -15,7 +21,9 @@ var path = {
 	//
 	"getPoiSceneSummary": hostName + 'get_poi_scene_summary',
 	//poi场景
-	"getPoiProvSceneNum": hostName + 'get_poi_prov_scene_num'
+	"getPoiProvSceneNum": hostName + 'get_poi_prov_scene_num',
+	//首页地图数据
+ 	"getPoiAllCitys":hostName + 'get_poi_all_citys'
 }
 
 var getApi = function(url, data, success, error) {

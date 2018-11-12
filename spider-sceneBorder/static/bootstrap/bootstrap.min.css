@@ -177,7 +177,8 @@ input {
 input[type=checkbox],
 input[type=radio] {
 	box-sizing: border-box;
-	padding: 0
+	padding: 0;
+	box-shadow:  blue;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -1971,7 +1972,7 @@ input[type=radio],
 input[type=checkbox] {
 	margin: 4px 0 0;
 	margin-top: 1px \9;
-	line-height: normal
+	line-height: normal;
 }
 
 input[type=file] {
@@ -2068,11 +2069,13 @@ input[type=date] {
 
 .radio,
 .checkbox {
-	display: block;
+	/* display: block; */
 	min-height: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	padding-left: 20px
+	padding-left: 20px;
+	background: green;
+	color: white;
 }
 
 .radio label,
@@ -2087,7 +2090,7 @@ input[type=date] {
 .checkbox input[type=checkbox],
 .checkbox-inline input[type=checkbox] {
 	float: left;
-	margin-left: -20px
+	margin-left: -20px;
 }
 
 .radio+.radio,
@@ -2328,12 +2331,12 @@ select[multiple].input-lg {
 .form-horizontal .checkbox-inline {
 	margin-top: 0;
 	margin-bottom: 0;
-	padding-top: 7px
+	/* padding-top: 7px */
 }
 
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-	min-height: 27px
+	/* min-height: 27px */
 }
 
 .form-horizontal .form-group {
