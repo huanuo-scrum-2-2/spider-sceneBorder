@@ -16,9 +16,11 @@ function check_login() {
                 console.log(user_name);
                 if (data.status == "true") {
                     sessionStorage.removeItem('role');
-                    sessionStorage.setItem('user-role', data.role); // 将当前登录用户信息存入sessionStorage
+                    sessionStorage.setItem('user_role', data.role); // 将当前登录用户信息存入sessionStorage
                     sessionStorage.removeItem('showName');
                     sessionStorage.setItem('showName', data.show_name); // 将当前登录用户信息存入sessionStorage
+                    sessionStorage.removeItem('user_id');
+                    sessionStorage.setItem('user_id', data.user_id); // 将当前登录用户信息存入sessionStorage
                     window.location.href = '../main/main.html';  //页面跳转
                 } else {
                     alert(data.info);

@@ -48,14 +48,21 @@ function editUser(id) {
     var param = {
         user_id: user_id
     };
+    if (sessionStorage.getItem('user_role') == 0 && sessionStorage.getItem('user_id') != user_id) {
+        $("#userpsd").attr("disabled", true);
+    }
     getApi(path.getUserByid, param, function (userInfo) {
         data = JSON.parse(userInfo);
         $("#showname").val(data[0].show_name);
         $("#username").val(data[0].user_name);
-        province = data[0].owner_prov;
-        city = data[0].owner_city;
-        document.getElementsByName("province")[0].value = province;
-        document.getElementsByName("city")[0].value = city;
+        $("#userpsd").val(data[0].user_passwd);
+        // province = data[0].owner_prov;
+        var city = data[0].owner_city;
+        // $("#province")[0].value = data[0].owner_prov;
+        $("#province").find("option:selected").text(data[0].owner_prov);
+        $("#city").find("option:selected").text(data[0].owner_city);
+        // document.getElementsByName("province")[0].value = data[0].owner_prov;
+        // document.getElementsByName("city")[0].value = data[0].owner_city;
         $("#useremail").val(data[0].owner_mail);
         $("#userphone").val(data[0].owner_phone);
         $("input:radio").eq(data[0].role_priv_level).attr("checked", "true");
@@ -63,7 +70,7 @@ function editUser(id) {
     });
 }
 
-//新增或修改
+//新增或修改 确认
 function datasubmit() {
     var param;
     if (edit_flag) { //编辑
@@ -103,7 +110,7 @@ function datasubmit() {
 
 //删除
 function deleteUser(id) {
-    var flag = confirm("确定要删除选中的记录吗?");
+    var flag = confirm("确定要删除选中的用户吗?");
     if (flag) {
         var param = {user_id: id};
         getApi(path.deleteUser, param, function () {

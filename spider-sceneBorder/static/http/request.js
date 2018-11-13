@@ -33,12 +33,12 @@ var path = {
 
 var getApi = function (url, data, success, error) {
     var option = {
-        beforeSend: function() {
-            var showName = sessionStorage.getItem('showName');
-            if(!showName) {
-                window.location.href = '../login/login.html';
-            }
-        },
+        // beforeSend: function() {
+        //     var showName = sessionStorage.getItem('showName');
+        //     if(!showName) {
+        //         window.location.href = '../login/login.html';
+        //     }
+        // },
         method: 'get',
         url: url,
         async: 'false',
