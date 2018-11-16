@@ -17,7 +17,7 @@ function getUserList() {
                 '</td><td>' + data[i].show_name +
                 '</td><td>' + data[i].role_priv_level +
                 '</td><td>' + data[i].login_time +
-                '</td><td>' + data[i].dept_name +
+                // '</td><td>' + data[i].dept_name +
                 '</td><td>' + data[i].owner_prov +
                 '</td><td>' + data[i].owner_city +
                 '</td><td>' + data[i].owner_mail +
