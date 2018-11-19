@@ -1,0 +1,51 @@
+html,body{
+	height: 90%;
+	background: #F2F2F2;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.chart_modal{
+	background: white;
+	width: 31%;
+	height: 50%;
+	padding:0.5%;
+	margin: 0.5%;
+	float: left;
+	border-radius: 20px;
+}
+.chart{
+	height: 90%;
+	width: 90%;
+	margin-left: 5%;
+}
+.indexMap{
+	width: 64%;
+	height: 50%;
+	padding:0.5%;
+	margin: 0.5%;
+	float: left;
+	border-radius: 20px;
+	background: white;
+}
+.modal_title{
+	position: relative;
+	top:0px;
+	height: 8%;
+	width: 95%;
+	margin-left: 2.5%;
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1px;
+	color: #222222;
+	border-bottom: 1px solid gainsboro;
+}
+.allmap{
+	width: 98%;
+    height: 88%;
+    margin-left: 1%;
+    margin-top: 1%;
+    border-radius: 20px;
+}
