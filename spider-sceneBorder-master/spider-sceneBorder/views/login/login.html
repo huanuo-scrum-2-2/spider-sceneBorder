@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="login.css"/>
+</head>
+
+<body>
+<div class="login_div">
+    <img class="login_img" src="../../static/images/login-img.png"/>
+    <div class="login_right">
+        <img class="login_logo" src="../../static/images/login-logo.png"/>
+        <div class="login_input ">
+            <input class="login_name" type="text" id="user_name" placeholder="用户名"/>
+        </div>
+        <div class="login_input">
+            <input class="login_psd" type="password" id="user_pswd" placeholder="密码"/>
+        </div>
+        <button class="login_btn" onclick="check_login();">登录</button>
+    </div>
+</div>
+<div class="login_rights">
+    <p>Copyright © 2018 敏捷小组2班技术支持</p>
+</div>
+</body>
+<script type="text/javascript" src="../../static/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../static/http/request.js"></script>
+<script type="text/javascript" src="login.js"></script>
+</html>
