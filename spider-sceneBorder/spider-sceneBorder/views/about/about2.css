@@ -79,49 +79,49 @@
 	position: absolute;
 }
 .intr_1{
-	width: 650px;
-	height: 360px;
+	width: 35%;
+	height: 100%;
 	position: absolute;
 }
 
 .intr_2{
-	width: 510px;
-	height: 360px;
-	left: 660px;
+	width: 27%;
+	height: 100%;
+	left: 35.5%;
 	position: absolute;
 }
 
 .intr_3{
-	width: 660px;
-	height: 360px;
-	left: 1180px;
+	width: 35%;
+	height: 100%;
+	left: 63%;
 	position: absolute;	
 }
 .intr_4{
-	width: 360px;
-	height: 360px;
-	top: 370px;
+	width: 19%;
+	height: 100%;
+	top: 102%;
 	position: absolute;	
 }
 .intr_5{
-	width: 505px;
-	height: 360px;
-	left: 370px;
-	top: 370px;
+	width: 27.5%;
+	height: 100%;
+	left: 19.5%;
+	top: 102%;
 	position: absolute;	
 }
 .intr_6{
-	width: 585px;
-	height: 360px;
-	left: 885px;
-	top: 370px;
+	width: 31%;
+	height: 100%;
+	left: 47.5%;
+	top: 102%;
 	position: absolute;	
 }
 .intr_7{
-	width: 360px;
-	height: 360px;
-	left: 1480px;
-	top: 370px;
+	width: 19%;
+	height: 100%;
+	left: 79%;
+	top: 102%;
 	position: absolute;
 }
 	
