@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>省市区联动</title>
+ 
+<style type="text/css">
+body{
+	background-color:#00CC99;
+	padding-left:400px;
+	padding-top:300px;
+	}
+select{
+	background-color:#99FF33;
+	width:100px;
+	height:30px;
+	cursor:pointer;
+	}
+</style>
+</head>
+ 
+<body>
+<select id="province" onchange="chooseProvince(this)">
+	<option value="1">请选择省</option>
+</select>
+ 
+<select id="city" onChange="chooseCity(this)">
+	<option value="1">请选择市</option>
+</select>
+ 
+<select id="area">
+	<option value="1">请选择区</option>
+</select>
+<button class="select_btn">导出</button>
+<script type="text/javascript" src="../../static/commonjs/citySelect.js"></script>
+</body>
+</html>
