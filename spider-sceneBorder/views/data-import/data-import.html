@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>数据导出</title>
+			<link rel="stylesheet" href="data-import.css" />
+			<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	</head>
+
+	<body>
+		<div class="param_set">
+			<div class="param_select">
+				<span>时间:</span>
+				<input type="radio" id="today" name="choose-date" type="radio" value="today">
+				<label for='today'>今天</label>
+				<input type="radio" id="yesterday" name="choose-date" type="radio" value="yesterday">
+				<label for='yesterday'>昨天</label>
+				<input type="radio" id="aweek" name="choose-date" type="radio" value="aweek">
+				<label for='aweek'>最近七天</label>
+				<input type="radio" id="amonth" name="choose-date" type="radio" value="amonth">
+				<label for='amonth'>最近30天</label>
+				<input type="text" placeholder="请选择日期" id="datepicker">
+				<span>地域</span>
+				<span class="city_select">
+					<select id="province" onchange="chooseProvince(this)">
+						<option value="1">请选择省</option>
+					</select>
+
+					<select id="city" onChange="chooseCity(this)">
+						<option value="1">请选择市</option>
+					</select>
+
+					<select id="area">
+						<option value="1">请选择区</option>
+					</select>
+				</span>
+				<span>地址</span>
+				<input type="text" id="select_address" placeholder="请输入" />
+				<span>名称</span>
+				<input type="text" id="select_name" placeholder="请输入" />
+				<div style="margin-top: 1%;">
+					<span>类型</span>
+					<input type="text" id="select_type" placeholder="请输入" />
+					<span>经度范围</span>
+					<input type="text" id="select_lat" placeholder="请输入" />
+					<span>纬度范围</span>
+					<input type="text" id="select_lon" placeholder="请输入" />
+					<button id="selectBtn" class="select_btn">查询</button>
+					<button id="resetBtn" class="select_btn">重置</button>
+				</div>
+
+			</div>
+		</div>
+		<div class="data_list">
+			<div class="list_head">
+				<span>信息列表</span>
+				<button class="select_btn">导出</button>
+				<input type="file" id="select_Folder" webkitdirectory></input>
+			</div>
+			<table class="data_table" cellspacing="5">
+				<tr style="background: #eff0f4;">
+					<th><input type="checkbox"> </th>
+						<th>日期</th>
+						<th>省份</th>
+						<th>地市</th>
+						<th>地区</th>
+						<th>详细地址</th>
+						<th>名称</th>
+						<th>经度</th>
+						<th>纬度</th>
+						<th>边框</th>
+				</tr>
+				<tr>
+					<td><input type="checkbox" ></td>
+						<td>2018/10/24</td>
+						<td>湖南省</td>
+						<td>长沙市</td>
+						<td>望城区</td>
+						<td>长沙市望城区同心路1号</td>
+						<td>绿地香树花城</td>
+						<td>102.334123</td>
+						<td>213.334321</td>
+						<td style="overflow: auto;width: 400px;">102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;;102.33225,24.23</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"> </td>
+						<td>2018/10/24</td>
+						<td>湖南省</td>
+						<td>长沙市</td>
+						<td>望城区</td>
+						<td>长沙市望城区同心路1号</td>
+						<td>绿地香树花城</td>
+						<td>102.334123</td>
+						<td>213.334321</td>
+						<td style="overflow: auto;width: 400px;">102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;;102.33225,24.23</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" ></td>
+						<td>2018/10/24</td>
+						<td>湖南省</td>
+						<td>长沙市</td>
+						<td>望城区</td>
+						<td>长沙市望城区同心路1号</td>
+						<td>绿地香树花城</td>
+						<td>102.334123</td>
+						<td>213.334321</td>
+						<td style="overflow: auto;width: 400px;">102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;;102.33225,24.23</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"> </td>
+						<td>2018/10/24</td>
+						<td>湖南省</td>
+						<td>长沙市</td>
+						<td>望城区</td>
+						<td>长沙市望城区同心路1号</td>
+						<td>绿地香树花城</td>
+						<td>102.334123</td>
+						<td>213.334321</td>
+						<td style="overflow: auto;width: 400px;">102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;;102.33225,24.23</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" ></td>
+						<td>2018/10/24</td>
+						<td>湖南省</td>
+						<td>长沙市</td>
+						<td>望城区</td>
+						<td>长沙市望城区同心路1号</td>
+						<td>绿地香树花城</td>
+						<td>102.334123</td>
+						<td>213.334321</td>
+						<td style="overflow: auto;width: 400px;">102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;102.33225,24.231423;;102.33225,24.23</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../static/jquery/jquery-1.8.3.min.js"></script>
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="../../static/commonjs/citySelect.js"></script>
+	<script type="text/javascript" src="data-import.js"></script>
+
+</html>
