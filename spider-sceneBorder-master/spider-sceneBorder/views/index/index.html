@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <link type="text/css" rel="stylesheet" href="index.css"/>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=kQCfNwYZ429f1S4PGfHEl9KoTbrUSvsV"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/CurveLine/1.5/src/CurveLine.min.js"></script>
+    <title>首页</title>
+</head>
+
+<body>
+<div class="chart_modal">
+    <div class="modal_title">
+        <span>省级数据采集完整率</span>
+    </div>
+    <div class="chart" id="chart_1"></div>
+</div>
+<div class="chart_modal">
+    <div class="modal_title"><span>省级已采集POI信息总数量</span></div>
+    <div class="chart" id="chart_2"></div>
+</div>
+<div class="chart_modal">
+    <div class="modal_title"><span>系统已采集场景级POI数量分布</span></div>
+    <div class="chart" id="chart_3"></div>
+</div>
+<div class="indexMap">
+    <div class="modal_title"><span>地图</span></div>
+    <div class="allmap" id="indexMap"></div>
+</div>
+<div class="chart_modal">
+    <div class="modal_title"><span>省级已采集场景类型</span></div>
+    <div class="chart" id="chart_4"></div>
+</div>
+</body>
+
+</html>
+<script type="text/javascript" src="../../static/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../static/echarts/echarts.js"></script>
+<script type="text/javascript" src="../../static/http/request.js"></script>
+<script type="text/javascript" src="../../static/baiduconvert/bmap.js"></script>
+
+<script type="text/javascript" src="index.js"></script>
