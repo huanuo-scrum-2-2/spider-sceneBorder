@@ -3,14 +3,14 @@ html {
 	width: 100%;
 	height: 100%;
 	overflow-y: hidden;
-	min-width: 1536px;
+
+	min-width: 1125px;
 }
 
 * {
 	margin: 0px;
 	padding: 0px;
 }
-
 
 
 #chartBnum{
@@ -25,7 +25,81 @@ html {
 #provs{
 	position:inherit;
 left:0%;  
-width: 20%;
+width: 20%;}
+ 
+ .content{
+	top:65px;
+	width: 1125px;
+	height: 110px;
+	position: absolute;
+   
+}
+
+.content div{
+	width: 1125px;
+	height: 33px;
+	margin: 1px;
+}
+ 
+
+
+ .select_btn{
+	position:inherit;
+left:60%;
+    height: inherit;
+    width: 10%;
+}
+ 
+
+
+.fet {
+    position: absolute;
+    top: 0px;
+    height: 33px; 
+    width: 155px;
+    left: 700px;
+}
+ 
+.fet li {
+	top: 0px;
+	    height: 33px;
+    width: 155px;
+    left: 700px;
+	margin: 0 0%;
+	list-style-type: none;
+	text-align: center;
+	/* padding-top: 25px; */
+	line-height: 30px;
+	/* padding-bottom: 5px; */
+}
+
+.fet a {
+	text-decoration: none;
+	color: black;
+}
+
+
+
+
+ 
+ 
+ 
+  
+ 
+
+#chart_1{
+	position: absolute;  top:200px;left: 900px; width:400px;height:200px;
+}
+
+#chart_2{
+	position: absolute;  top:400px;left: 900px; width:400px;height:200px;
+}
+
+
+#province{
+	position:inherit;
+left:0%;  
+width: 10%;
 height: inherit;
 background-color:dodgerblue;
 color:white;
@@ -34,8 +108,18 @@ color:white;
 
 #city{
 	position:inherit;
-left:40%;  
-width: 20%;
+left:15%;
+width: 10%;
+height: inherit;
+background-color:dodgerblue;
+color:white;
+
+}
+
+#area{
+	position:inherit;
+left:30%;  
+width: 10%;
 height: inherit;
 background-color:dodgerblue;
 color:white;
@@ -46,6 +130,14 @@ color:white;
 		position:inherit;
 left:60%;  
 width: 20%;
+
+
+
+#scenario{
+		position:inherit;
+left:45%;  
+width: 10%;
+>>>>>>> eac1dd3b50e3fcfc30b14c6336df1e39d9955ba7
 height: inherit;
 background-color:dodgerblue;
 color:white;
@@ -61,10 +153,22 @@ bottom:15px;
 
 
 
+#mapchoosed{
+position:inherit;
+left:60%;  
+width: 10%;
+height: inherit;
+background-color:dodgerblue;
+color:white;
+} 
+
+ 
+
 
 #allmap{
 position:absolute;
 left:0%;
+
    width: 1035px;
     height: 400px;
 bottom:75px; 
@@ -87,16 +191,28 @@ bottom:60px;
 .content div{
 	width: 1535px;
 	height: 37px;
+
+#r-result{
+position:absolute;
+	width: 900px;
+	height: 20px;
+bottom:25px; 
 }
 
 
+
+>>>>>>> eac1dd3b50e3fcfc30b14c6336df1e39d9955ba7
 .index_head {
 	width: 100%;
 	height: 60px;
 	background-color: #3e73ff;
 	color: white;
 	position: absolute;
+<<<<<<< HEAD
 	min-width: 1536px;
+=======
+	min-width: 1125px;
+>>>>>>> eac1dd3b50e3fcfc30b14c6336df1e39d9955ba7
 	line-height: 60px;
 }
 
