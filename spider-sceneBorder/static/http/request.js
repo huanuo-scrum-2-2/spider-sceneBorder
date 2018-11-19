@@ -3,7 +3,10 @@ var hostName = "http://sceneborder.imwork.net/"; //接口公共的ip或者域名
 var path = {
     //登录
     "login": hostName + 'user_login_check',
-
+//获取在线用户数
+    "getOnlineUserCount":hostName + 'get_online_user_count',
+    //退出
+    "userLogout":hostName + 'user_logout',
     //用户管理模块
     //获取所有用户列表
     "getUserInfo": hostName + 'get_user_info',

@@ -1,282 +1,176 @@
 body,
 html {
-	width: 100%;
-	height: 100%;
-	overflow-y: hidden;
-
-	min-width: 1125px;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    min-width: 1125px;
 }
 
 * {
-	margin: 0px;
-	padding: 0px;
+    margin: 0px;
+    padding: 0px;
+    list-style-type:none
 }
 
-
-#chartBnum{
-	position: absolute;  top:180px;left: 1100px; width:420px;height:250px;
+.content {
+   margin: 70px 0 0 1%;
+    width: 60%;
+    height: 110px;
+    position: absolute;
 }
 
-#chartPnum{
-	position: absolute;  top:390px;left: 1100px; width:420px;height:250px;
+.content div {
+    width: 1125px;
+    height: 33px;
+    margin: 1px;
 }
-
-
-#provs{
-	position:inherit;
-left:0%;  
-width: 20%;}
- 
- .content{
-	top:65px;
-	width: 1125px;
-	height: 110px;
-	position: absolute;
-   
+.select_btn {
+    /*float: right;*/
+    margin: 0  0  0 70px;
+    padding: 6px 20px;
+    border: 1px solid white;
+    background: dodgerblue;
+    color: white;
+    border-radius: 3px;
 }
-
-.content div{
-	width: 1125px;
-	height: 33px;
-	margin: 1px;
-}
- 
-
-
- .select_btn{
-	position:inherit;
-left:60%;
-    height: inherit;
-    width: 10%;
-}
- 
-
-
 .fet {
     position: absolute;
     top: 0px;
-    height: 33px; 
+    height: 33px;
     width: 155px;
     left: 700px;
 }
- 
+
 .fet li {
-	top: 0px;
-	    height: 33px;
+    top: 0px;
+    height: 33px;
     width: 155px;
     left: 700px;
-	margin: 0 0%;
-	list-style-type: none;
-	text-align: center;
-	/* padding-top: 25px; */
-	line-height: 30px;
-	/* padding-bottom: 5px; */
+    margin: 0 0%;
+    list-style-type:none;
+    text-align: center;
+    line-height: 30px;
 }
 
 .fet a {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
 }
 
-
-
-
- 
- 
- 
-  
- 
-
-#chart_1{
-	position: absolute;  top:200px;left: 900px; width:400px;height:200px;
+#chart_1 {
+    position: absolute;
+    top: 200px;
+    left: 63%;
+    width: 30%;
+    height: 200px;
 }
 
-#chart_2{
-	position: absolute;  top:400px;left: 900px; width:400px;height:200px;
+#chart_2 {
+    position: absolute;
+    top: 400px;
+    left: 63%;
+    width: 30%;
+    height: 200px;
 }
 
-
-#province{
-	position:inherit;
-left:0%;  
-width: 10%;
-height: inherit;
-background-color:dodgerblue;
-color:white;
-
+#province {
+    position: inherit;
+    left: 0%;
+    width: 10%;
+    height: inherit;
+    background-color: white;
+    color: black;
+    border: 1px solid dodgerblue;
+    border-radius: 3px;
 }
 
-#city{
-	position:inherit;
-left:15%;
-width: 10%;
-height: inherit;
-background-color:dodgerblue;
-color:white;
-
+#city {
+    position: inherit;
+    left: 15%;
+    width: 10%;
+    height: inherit;
+    background-color: white;
+    color: black;
+    border: 1px solid dodgerblue;
+    border-radius: 3px;
 }
 
-#area{
-	position:inherit;
-left:30%;  
-width: 10%;
-height: inherit;
-background-color:dodgerblue;
-color:white;
-
+#area {
+    position: inherit;
+    left: 30%;
+    width: 10%;
+    height: inherit;
+    background-color: white;
+    color: black;
+    border: 1px solid dodgerblue;
+    border-radius: 3px;
 }
 
-#scenario{
-		position:inherit;
-left:60%;  
-width: 20%;
-
-
-
-#scenario{
-		position:inherit;
-left:45%;  
-width: 10%;
->>>>>>> eac1dd3b50e3fcfc30b14c6336df1e39d9955ba7
-height: inherit;
-background-color:dodgerblue;
-color:white;
-	
-}
-.PoiFetch{
-	position:absolute;
-left:0%;
-    height: 39px;
-    width: 20%;
-bottom:15px; 
+#scenario {
+    position: inherit;
+    left: 45%;
+    width: 10%;
+    height: inherit;
+    background-color: white;
+    color: black;
+    border: 1px solid dodgerblue;
+    border-radius: 3px;
 }
 
-
-
-#mapchoosed{
-position:inherit;
-left:60%;  
-width: 10%;
-height: inherit;
-background-color:dodgerblue;
-color:white;
-} 
-
- 
-
-
-#allmap{
-position:absolute;
-left:0%;
-
-   width: 1035px;
-    height: 400px;
-bottom:75px; 
-}
-#r-result{
-position:absolute;
-	width: 800px;
-	height: 20px;
-bottom:60px; 
-}
-.content{
-	top:65px;
-	width: 1535px;
-	height: 100px;
-	position: absolute;
-    border-width:1px;
-	border-style:solid;
-	border-color:hotpink;
-}
-.content div{
-	width: 1535px;
-	height: 37px;
-
-#r-result{
-position:absolute;
-	width: 900px;
-	height: 20px;
-bottom:25px; 
+#mapchoosed {
+    position: inherit;
+    left: 60%;
+    width: 10%;
+    height: inherit;
+    background-color: white;
+    color: black;
+    border: 1px solid dodgerblue;
+    border-radius: 3px;
 }
 
+#allmap {
+    position: absolute;
+    left: 1%;
+    width: 60%;
+    height: 500px;
+    bottom: 40px;
+    border-radius: 5px;
+}
 
+#r-result {
+    position: absolute;
+    width: 900px;
+    height: 20px;
+    bottom: 25px;
+}
 
->>>>>>> eac1dd3b50e3fcfc30b14c6336df1e39d9955ba7
 .index_head {
-	width: 100%;
-	height: 60px;
-	background-color: #3e73ff;
-	color: white;
-	position: absolute;
-<<<<<<< HEAD
-	min-width: 1536px;
-=======
-	min-width: 1125px;
->>>>>>> eac1dd3b50e3fcfc30b14c6336df1e39d9955ba7
-	line-height: 60px;
+    width: 100%;
+    height: 60px;
+    background-color: #3e73ff;
+    color: white;
+    position: absolute;
+    min-width: 1125px;
+    line-height: 60px;
 }
 
 .index_logo {
-	width: 200px;
-	height: 60px;
-	float: left;
+    width: 200px;
+    height: 60px;
+    float: left;
 }
 
 .menu_ul {
-	height: 60px;
-	width: 600px;
-	float: left;
+    height: 60px;
+    width: 600px;
+    float: left;
 }
 
 .menu_ul li {
-	float: left;
-	width: 15%;
-	margin: 0 2%;
-	height: 56px;
-	list-style-type: none;
-	text-align: center;
-	/* padding-top: 25px; */
-	line-height: 60px;
-	/* padding-bottom: 5px; */
-}
-
-.menu_ul a {
-	text-decoration: none;
-	color: white;
-}
-
-.selected {
-	border-bottom: 3px solid white;
-}
-
-.index_mine {
-	height: 60px;
-	float: right;
-	margin-right: 30px;
-	font-family: MicrosoftYaHei;
-	font-size: 14px;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 60px;
-	vertical-align: middle;
-	letter-spacing: 1px;
-	color: #ffffff;
-	width: 450px;
-}
-
-.index_mine span {
-	margin: 0 10px 0 0;
-}
-
-.index_mine img {
-	width: 18px;
-	height: 18px;
-	vertical-align: middle;
-	margin: 0 10px;
-}
-
-.user_img {
-	margin-right: 5px;
-	width: 31px;
-	height: 30px;
+    float: left;
+    width: 15%;
+    margin: 0 2%;
+    height: 56px;
+    list-style-type: none;
+    text-align: center;
 }

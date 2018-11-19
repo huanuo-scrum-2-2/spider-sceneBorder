@@ -281,7 +281,7 @@ function draw_chart3(scene_name, pois_count) {
 }
 
 function draw_chart4(prov,count) {
-	var myCharts3 = echarts.init(document.getElementById('chart_4'));
+	var myCharts4= echarts.init(document.getElementById('chart_4'));
 	var option = {
 			color: ['#3398DB'],
 			tooltip: {
@@ -352,7 +352,7 @@ function draw_chart4(prov,count) {
 				},
 			}]
 		};
-	myCharts3.setOption(option);
+	myCharts4.setOption(option);
 }
 
 function  getMap(data,geoCoordMap) {

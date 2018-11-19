@@ -19,7 +19,7 @@
                 数据导出</a>
         </li>
         <li>
-            <a href="../data-import/data-get.html" target="iframe_a">
+            <a href="../data-get/data-get.html" target="iframe_a">
                 数据采集</a>
         </li>
         <li>
@@ -32,13 +32,13 @@
         </li>
     </ul>
     <div class="index_mine">
-        <span>当前在线人数: 51</span>
+        <span id="onlineCount">当前在线人数: </span>
         <img src="../../static/images/index_userimg.png" class="user_img" style="margin-right: 5px;width: 31px;height: 30px;
 "/>
         <span id="show_name">Hi，马邦德</span>
         <img src="../../static/images/index_message.png"/>
         <img src="../../static/images/index_help.png"/>
-        <img src="../../static/images/index_loginout.png"/>
+    <img id="logout" src="../../static/images/index_loginout.png"/>
     </div>
 </div>
 <iframe src="../index/index.html" name="iframe_a" frameborder="0" frameborder="1" width="100%" height="100%">
@@ -50,6 +50,11 @@
 <script type="text/javascript" src="../../static/http/request.js"></script>
 <script>
     $(function () {
+       getApi( path.getOnlineUserCount,null,function (data) {
+           console.log(data);
+           $("#onlineCount").html('当前在线人数: '+JSON.parse(data).online);
+       })
+        
         if( sessionStorage.getItem('showName')){
         document.getElementById('show_name').innerHTML = sessionStorage.getItem('showName');
         }
@@ -60,7 +65,15 @@
             $(this).addClass('selected');                            // 添加当前元素的样式
 
         });
-
+        $("#logout").click(function(){
+            var param={
+                'user_id':sessionStorage.getItem('user_id')
+            }
+            getApi( path.userLogout,param,function (data) {
+                sessionStorage.clear();
+                window.location.href = '../login/login.html';  //页面跳转
+            })
+        });
     });
 </script>
 </html>
