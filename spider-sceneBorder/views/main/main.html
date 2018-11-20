@@ -50,8 +50,8 @@
 <script type="text/javascript" src="../../static/http/request.js"></script>
 <script>
     $(function () {
-        if (sessionStorage.getItem('showName')) {
-            document.getElementById('show_name').innerHTML = sessionStorage.getItem('showName');
+        if( sessionStorage.getItem('showName')){
+        document.getElementById('show_name').innerHTML = sessionStorage.getItem('showName');
         }
         $(".menu_ul li").click(function () {
 
