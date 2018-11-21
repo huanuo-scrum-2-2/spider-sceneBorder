@@ -9,7 +9,7 @@
 		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bbMVKmETGRmWKtRT7nsWDRQBwcCdtvmF"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.4.0/echarts.min.js " ></script>
 	</head>
-	<body bgcolor="#F0F0F0">  
+	<body bgcolor=" #3e73ff">  
 
 		<div class="content">
 			<div class="btn">

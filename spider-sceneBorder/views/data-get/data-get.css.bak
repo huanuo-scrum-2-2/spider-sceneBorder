@@ -55,7 +55,7 @@ html {
 #chart_1 {
     position: absolute;
     top: 190px;
-    left: 69%;
+    left: 68%;
     width: 30%;
     height: 197px;
 }
@@ -63,7 +63,7 @@ html {
 #chart_2 {
     position: absolute;
     top: 410px;
-    left: 69%;
+    left: 68%;
     width: 30%;
     height: 197px;
 }

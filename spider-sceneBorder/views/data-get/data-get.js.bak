@@ -121,7 +121,7 @@ $(document).ready(function () {
         
         
         map.setMapStyle({
-  styleJson:[
+  styleJson:[[
           {
                     "featureType": "background",
                     "elementType": "all",
@@ -129,7 +129,7 @@ $(document).ready(function () {
                               "color": "#ffffffff"
                     }
           }
-]
+]]
 })
         
         
@@ -449,7 +449,7 @@ $('#selectBtn').click(function () {
     var map = new BMap.Map("allmap");
     
             map.setMapStyle({
-  styleJson:[
+  styleJson:[[
           {
                     "featureType": "background",
                     "elementType": "all",
@@ -457,7 +457,7 @@ $('#selectBtn').click(function () {
                               "color": "#ffffffff"
                     }
           }
-]
+]]
 })
     
     
