@@ -408,7 +408,7 @@ $(document).ready(function () {
             count[i] = data[i].pois_border_count;
             countd[i] = data[i].pois_count;
             console.log('采集场景数量 getPoisSummary ');
-            console.log(prov);
+            
             
             
             
@@ -831,7 +831,7 @@ $('#selectBtn').click(function () {
     vgetApi(mypath.getgridhadrun, null, function (data) {
         var data = JSON.parse(data);
         for (var i = 0; i < data.length; i++) {
-
+        	 console.log(data[i].boundary);
             add_bud_2_map(data[i].boundary);
 
         }

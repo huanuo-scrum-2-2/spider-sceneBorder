@@ -13,20 +13,20 @@
 
 		<div class="content">
 			<div class="btn">
-				<span id="pr">选择省:</span>
+				<span id="pr">省份</span>
 				<select  id="province"  onchange="chooseProvince(this)">
-					<option value="-1">省份</option>
+					<option value="-1">请选择</option>
 				</select>
-				<span id="cy">选择市:</span>
+				<span id="cy">地市</span>
 				<select id="city"  onChange="chooseCity(this)">
-					<option value="-1">地市</option>
+					<option value="-1">请选择</option>
 				</select>				
 				<select id="area" >
 						<option value="-1">请选择区</option>
 					</select>
-				<span id="so">选场景:</span>
+				<span id="so">采集场景</span>
 				<select id="scenario" >
-					<option value="-1">场景</option>
+					<option value="-1">请选择</option>
 					<option value="0">小区</option>
 					<option value="1">高校</option>
 					<option value="2">景区</option>
@@ -37,9 +37,10 @@
 					<option value="7">政企单位</option>
 					<option value="8">楼盘</option>
 				</select>
-				<span id="mc">选地图:</span>
+				<span id="mc">数据源</span>
 				<select id="mapchoosed" >
-					<option value="-1">baidu</option>
+					<option value="-1">请选择</option>
+					<option value="0">baidu</option>
 					<option value="0">gaode</option>
 				</select>
 				<button id="selectBtn" class="select_btn">启动</button>

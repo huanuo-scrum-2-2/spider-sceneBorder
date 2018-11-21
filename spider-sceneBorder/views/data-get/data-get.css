@@ -79,7 +79,7 @@ html {
 
 #province {
      position: absolute;
-    left: 52px;
+    left: 32px;
     width: 112px;
     height: inherit;
    border: 1px solid gainsboro;
@@ -92,7 +92,7 @@ html {
 
 #cy {
 	 position: absolute;
-    left: 170px;
+    left: 150px;
   color: black;
     font-size:5px;
     top:12px;
@@ -101,7 +101,7 @@ html {
 
 #city {
     position: absolute;
-    left: 220px;
+    left: 180px;
     width: 112px;
     height: inherit;
 
@@ -118,14 +118,14 @@ html {
 
 #so {
 	 position: absolute;
-    left: 340px;
+    left: 300px;
    color: black;
     font-size:5px;
     top:12px;
 }
 #scenario {
     position: absolute;
-    left: 390px;
+    left: 355px;
    width: 112px;
     height: inherit;
     	background: white;
@@ -139,7 +139,7 @@ html {
 
 #mc {
 	 position: absolute;
-    left: 510px;
+    left: 478px;
  color: black;
     font-size:5px;
     top:12px;
@@ -148,7 +148,7 @@ html {
 
 #mapchoosed {
     position: absolute;
-    left: 560px;
+    left: 520px;
     width: 112px;
     height: inherit;
     background-color: white;
