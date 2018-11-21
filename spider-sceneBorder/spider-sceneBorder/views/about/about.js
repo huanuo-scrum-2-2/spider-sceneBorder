@@ -1,4 +1,4 @@
-      var arrImg = ['../../static/images/关于轮播1.png', '../../static/images/关于轮播2.jpg', '../../static/images/关于轮播3.jpg'], 
+      var arrImg = ['../../static/images/关于轮播1.jpg', '../../static/images/关于轮播2.jpg', '../../static/images/关于轮播3.jpg'], 
       //背景url地址数组，更加多自己增加这个数组项
           dom =  document.getElementById('about_head'),
                     timer = 2000;
