@@ -15,7 +15,7 @@ html {
 .content {
    margin: 70px 0 0 1%;
     width: 98%;
-    height: 110px;
+    height: 18%;
     position: absolute;    
    border: 1px solid gainsboro;
      background: white;  
@@ -30,7 +30,7 @@ html {
 
 
 .content div {
-    width: 1125px;
+    width: 98%;
     height: 33px;
     margin: 1.5px;
     overflow:hidden;
@@ -52,21 +52,6 @@ html {
 }
 
 
-#chart_1 {
-    position: absolute;
-    top: 190px;
-    left: 69%;
-    width: 30%;
-    height: 197px;
-}
-
-#chart_2 {
-    position: absolute;
-    top: 410px;
-    left: 69%;
-    width: 30%;
-    height: 197px;
-}
 
 
 #pr {
@@ -157,12 +142,29 @@ html {
     border-radius: 3px;
 }
 
+
+#chart_1 {
+    position: absolute;
+    top: 30%;
+    left: 69%;
+    width: 30%;
+    height: 32%;
+}
+
+#chart_2 {
+    position: absolute;
+    top: 63%;
+    left: 69%;
+    width: 30%;
+    height: 33%;
+}
+
 #allmap {
     position: absolute;
+    top: 30%;
     left: 1%;
     width: 65%;
-    height: 70%;
-    bottom: 3px;
+    height: 66%;
     border: 1px solid gainsboro;
     background-color: white;
 }

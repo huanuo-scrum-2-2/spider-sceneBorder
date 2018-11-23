@@ -1,115 +1,58 @@
+var xx;
+var yy;
+
 $(document).ready(function () {
-        /* !window.WebSocket、window.MozWebSocket检测浏览器对websocket的支持*/
-        if (!window.WebSocket) {
-            if (window.MozWebSocket) {
-                window.WebSocket = window.MozWebSocket;
-            } else {
-                console.log("<p>你的浏览器不支持websocket</p>");
-            }
+	$('#scenario').change(function(){ 
+		var selectProvince = $("#province option:selected").text();
+    var selectCity = $("#city option:selected").text();
+		locationurl="http://sceneborder.imwork.net/"+ 'get_centerxy_by_wgs84?prov=' + selectProvince + '&city=' + selectCity
+		var vgetApi = function (url, data, success, error) {
+        var option = {
+            method: 'get',
+            url: url,
+            async: false,
+            contentType: "application/json; charset=UTF-8",
+            data: data,
+            success: success,
+            error: error
+        };
+        $.ajax(option);
+    };
+ 
+	 vgetApi(locationurl, null, function (data) {
+
+        var data = JSON.parse(data);
+        window.xx=data.x;
+        window.yy=data.y;
+                
+       function G(id) {
+            return document.getElementById(id);
         }
 
-        var lockReconnect = false;  //避免ws重复连接
-        var wsUrl = "ws://sceneborder.imwork.net:31756/websocket/";
-        createWebSocket(wsUrl);   //连接ws
-
-        function createWebSocket(url) {
-            try {
-                ws = new WebSocket(url);
-                initEventHandle();
-            } catch (e) {
-                reconnect(url);
-                console.log(e);
-            }
-        }
-
-        function initEventHandle() {
-            ws.onclose = function () {
-                console.log("ws连接关闭!" + new Date().toUTCString());
-                reconnect(wsUrl);
-            };
-            ws.onerror = function () {
-                console.log("ws连接错误!");
-                reconnect(wsUrl);
-            };
-            ws.onopen = function (evt) {
-                $("ul li:eq(0)").html('websocket连接成功');
-                ws.send('ready!');
-                heartCheck.reset().start();      //心跳检测重置
-                console.log("ws连接成功!" + new Date().toUTCString());
-            };
-            ws.onmessage = function (evt) {    //如果获取到消息，心跳检测重置
-                $("ul li:eq(1)").html($("ul li:eq(0)").html())
-                $("ul li:eq(0)").html(evt.data);
-
-                add_coverage_2_map(evt.data)
-                heartCheck.reset().start();      //拿到任何消息都说明当前连接是正常的
-                // var eventData = evt.data;
-                // handMsg(eventData);   //引入消息处理模块
-            };
-            // 监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。
-            window.onbeforeunload = function () {
-                ws.close();
-            };
-        }
-
-        function add_coverage_2_map(sdata) {
-            if (sdata.indexOf("栅格范围|") != -1) {
-                var xy = sdata.split("栅格范围|")[1].split(";")
-                var lb = xy[0].split(",")
-                var rt = xy[1].split(",")
-                var polygon = new BMap.Polygon([
-                    new BMap.Point(lb[0], lb[1]),
-                    new BMap.Point(lb[0], rt[1]),
-                    new BMap.Point(rt[0], rt[1]),
-                    new BMap.Point(rt[0], lb[1]),
-                    new BMap.Point(lb[0], lb[1])
-                ], {
-                    strokeColor: "green",
-                    strokeWeight: 2,
-                    strokeOpacity: 0.5,
-                    fillColor: "blue"
-                }); //创建多边形
-
-                map.addOverlay(polygon);
-            }
-        }
-
-        function reconnect(url) {
-            if (lockReconnect) return;
-            lockReconnect = true;
-            setTimeout(function () {     //没连接上会一直重连，设置延迟避免请求过多
-                createWebSocket(url);
-                lockReconnect = false;
-            }, 5000);
-        }
-
-        //心跳检测
-        var heartCheck = {
-            //timeout: 540000,        //9分钟发一次心跳
-            //timeout: 3600,        //1分钟发一次心跳
-            timeout: 10800,        //3分钟发一次心跳
-            timeoutObj: null,
-            serverTimeoutObj: null,
-            reset: function () {
-                clearTimeout(this.timeoutObj);
-                clearTimeout(this.serverTimeoutObj);
-                return this;
-            },
-            start: function () {
-                var self = this;
-                this.timeoutObj = setTimeout(function () {
-                    //这里发送一个心跳，后端收到后，返回一个心跳消息，
-                    //onmessage拿到返回的心跳就说明连接正常
-                    ws.send("ping");
-                    console.log("ping!")
-                    self.serverTimeoutObj = setTimeout(function () {
-                        //如果超过一定时间还没重置，说明后端主动断开了
-                        //如果onclose会执行reconnect，我们执行ws.close()就行了.如果直接执行reconnect 会触发onclose导致重连两次
-                        ws.close();
-                    }, self.timeout)
-                }, this.timeout)
-            }
-        }
+        var map = new BMap.Map("allmap");
+        
+        
+        map.setMapStyle({
+  styleJson:[
+          {
+                    "featureType": "background",
+                    "elementType": "all",
+                    "stylers": {
+                              "color": "#ffffffff"
+                    }
+          }
+]
+})       
+    var point = new BMap.Point(window.xx, window.yy);
+    map.centerAndZoom(point, 12);
+     map.enableScrollWheelZoom(true);   
+        //console.log(data);
+    }, function (data) {
+    });	
+}) 
+	
+	
+	
 
         //====================================================心跳包重连CODE END=========================================
 
@@ -134,7 +77,7 @@ $(document).ready(function () {
         
         
         
-        var point = new BMap.Point(102.49395377099094, 24.331552333311514);
+    var point = new BMap.Point(113.14076702065299, 34.855163909251885);
     map.centerAndZoom(point, 12);
     map.enableScrollWheelZoom(true);
         var ac = new BMap.Autocomplete({
@@ -441,6 +384,123 @@ $(document).ready(function () {
 
 
 $('#selectBtn').click(function () {
+	
+		if ($("#province option:selected").text()!='请选择'&&$("#city option:selected").text()!='请选择'&&$("#scenario option:selected").text()!='请选择'&&$("#mapchoosed option:selected").text()!='请选择'    ){
+					
+			 if (!window.WebSocket) {
+            if (window.MozWebSocket) {
+                window.WebSocket = window.MozWebSocket;
+            } else {
+                console.log("<p>你的浏览器不支持websocket</p>");
+            }
+        }
+
+        var lockReconnect = false;  //避免ws重复连接
+        var wsUrl = "ws://sceneborder.imwork.net:31756/websocket/";
+        createWebSocket(wsUrl);   //连接ws
+
+        function createWebSocket(url) {
+            try {
+                ws = new WebSocket(url);
+                initEventHandle();
+            } catch (e) {
+                reconnect(url);
+                console.log(e);
+            }
+        }
+
+        function initEventHandle() {
+            ws.onclose = function () {
+                console.log("ws连接关闭!" + new Date().toUTCString());
+                reconnect(wsUrl);
+            };
+            ws.onerror = function () {
+                console.log("ws连接错误!");
+                reconnect(wsUrl);
+            };
+            ws.onopen = function (evt) {
+                $("ul li:eq(0)").html('websocket连接成功');
+                ws.send('ready!');
+                heartCheck.reset().start();      //心跳检测重置
+                console.log("ws连接成功!" + new Date().toUTCString());
+            };
+            ws.onmessage = function (evt) {    //如果获取到消息，心跳检测重置
+                $("ul li:eq(1)").html($("ul li:eq(0)").html())
+                $("ul li:eq(0)").html(evt.data);
+
+                add_coverage_2_map(evt.data)
+                heartCheck.reset().start();      //拿到任何消息都说明当前连接是正常的
+                // var eventData = evt.data;
+                // handMsg(eventData);   //引入消息处理模块
+            };
+            // 监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。
+            window.onbeforeunload = function () {
+                ws.close();
+            };
+        }
+
+        function add_coverage_2_map(sdata) {
+            if (sdata.indexOf("栅格范围|") != -1) {
+                var xy = sdata.split("栅格范围|")[1].split(";")
+                var lb = xy[0].split(",")
+                var rt = xy[1].split(",")
+                var polygon = new BMap.Polygon([
+                    new BMap.Point(lb[0], lb[1]),
+                    new BMap.Point(lb[0], rt[1]),
+                    new BMap.Point(rt[0], rt[1]),
+                    new BMap.Point(rt[0], lb[1]),
+                    new BMap.Point(lb[0], lb[1])
+                ], {
+                    strokeColor: "green",
+                    strokeWeight: 2,
+                    strokeOpacity: 0.5,
+                    fillColor: "orange"
+                }); //创建多边形
+
+                map.addOverlay(polygon);
+            }
+        }
+
+        function reconnect(url) {
+            if (lockReconnect) return;
+            lockReconnect = true;
+            setTimeout(function () {     //没连接上会一直重连，设置延迟避免请求过多
+                createWebSocket(url);
+                lockReconnect = false;
+            }, 5000);
+        }
+
+        //心跳检测
+        var heartCheck = {
+            //timeout: 540000,        //9分钟发一次心跳
+            //timeout: 3600,        //1分钟发一次心跳
+            timeout: 10800,        //3分钟发一次心跳
+            timeoutObj: null,
+            serverTimeoutObj: null,
+            reset: function () {
+                clearTimeout(this.timeoutObj);
+                clearTimeout(this.serverTimeoutObj);
+                return this;
+            },
+            start: function () {
+                var self = this;
+                this.timeoutObj = setTimeout(function () {
+                    //这里发送一个心跳，后端收到后，返回一个心跳消息，
+                    //onmessage拿到返回的心跳就说明连接正常
+                    ws.send("ping");
+                    console.log("ping!")
+                    self.serverTimeoutObj = setTimeout(function () {
+                        //如果超过一定时间还没重置，说明后端主动断开了
+                        //如果onclose会执行reconnect，我们执行ws.close()就行了.如果直接执行reconnect 会触发onclose导致重连两次
+                        ws.close();
+                    }, self.timeout)
+                }, this.timeout)
+            }
+        }
+	
+	
+	
+	
 
     function G(id) {
         return document.getElementById(id);
@@ -461,7 +521,7 @@ $('#selectBtn').click(function () {
 })
     
     
-    var point = new BMap.Point(114.59136534274533, 30.884559278604662);
+    var point = new BMap.Point(window.xx, window.yy);
     map.centerAndZoom(point, 12);
     map.enableScrollWheelZoom(true);
     var ac = new BMap.Autocomplete({
@@ -568,7 +628,7 @@ $('#selectBtn').click(function () {
             strokeColor: "blue",
             strokeWeight: 2,
             strokeOpacity: 0.5,
-            fillColor: "green"
+            fillColor: "yellow"
         }); //创建多边形
         map.addOverlay(polygon);
     }
@@ -838,6 +898,10 @@ $('#selectBtn').click(function () {
         //console.log(data);
     }, function (data) {
     });
+			
+		
+	}else{alert('省份、地市、场景、地图 均不可为空');}
+	
 
 
 })
