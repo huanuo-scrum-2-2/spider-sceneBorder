@@ -149,6 +149,8 @@ html {
     left: 69%;
     width: 30%;
     height: 32%;
+     border: 1px solid gainsboro;
+     background: white;  
 }
 
 #chart_2 {
@@ -157,7 +159,15 @@ html {
     left: 69%;
     width: 30%;
     height: 33%;
+     border: 1px solid gainsboro;
+     background: white;  
 }
+
+
+
+
+
+
 
 #allmap {
     position: absolute;
