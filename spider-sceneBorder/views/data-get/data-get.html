@@ -1,90 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head> 
-		<meta charset="UTF-8">
-		<title>数据采集</title>
-		<link rel="stylesheet" href="data-get.css" />
-		
-		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bbMVKmETGRmWKtRT7nsWDRQBwcCdtvmF"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.4.0/echarts.min.js " ></script>
-	</head>
-	<body bgcolor="#F0F0F0">  
+<head>
+	<meta charset="UTF-8">
+	<title>数据采集</title>
+	<link rel="stylesheet" href="data-get.css" />
 
-		<div class="content">
-			<div class="btn">
-				<span id="pr"><font color=red>*</font>省份</span>
-				<select  id="province"  onchange="chooseProvince(this)">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bbMVKmETGRmWKtRT7nsWDRQBwcCdtvmF"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.4.0/echarts.min.js "></script>
+</head>
+
+<body bgcolor="#F0F0F0">
+
+	<div class="content">
+		<div class="btn" style="margin-top:10px; font-size: 10px;">
+			<!-- id="pr" -->
+			<span id="pr">
+				<font style="margin-left:0%;color:red;">*</font>省份</span>
+				<select id="province" onchange="chooseProvince(this)">
 					<option value="-1">请选择</option>
 				</select>
-				<span id="cy"><font color=red>*</font>地市</span>
-				<select id="city"  onChange="chooseCity(this)">
+					<span id="cy">
+				<font style="margin-left:0%;color:red;">*</font>地市</span>
+				<select id="city" onChange="chooseCity(this)">
 					<option value="-1">请选择</option>
-				</select>				
-				<select id="area" >
-						<option value="-1">请选择区</option>
-					</select>
-				<span id="so"><font color=red>*</font>采集场景</span>
-				<select id="scenario" >
+				</select>
+				<span id="so">
+				<font style="margin-left:0%;color:red;">*</font>采集场景</span>
+					
+				<select id="scenario">
 					<option value="-1">请选择</option>
 					<option value="0">小区</option>
 					<option value="1">高校</option>
 					<option value="2">景区</option>
-					<option value="3">交通枢纽</option> 
+					<option value="3">交通枢纽</option>
 					<option value="4">商业购物</option>
 					<option value="5">宾馆酒店</option>
 					<option value="6">公园广场</option>
 					<option value="7">政企单位</option>
 					<option value="8">楼盘</option>
 				</select>
-				<span id="mc"><font color=red>*</font>数据源</span>
-				<select id="mapchoosed" >
+				<span id="mc">
+				<font style="margin-left:0%;color:red;">*</font>数据源</span>
+				<select id="mapchoosed">
 					<option value="-1">请选择</option>
 					<option value="0">baidu</option>
 					<option value="0">gaode</option>
 				</select>
-				<button id="selectBtn" class="select_btn">启动</button>
-				
-				
-			</div>
-			<div class="socc">
-				<ul >
-				<li style="overflow:hidden;">
-					<a >ws content</a>
-				</li>
-				</ul>
-			</div> 
-			<div class ="soccc">
-				<ul >
-				<li style="overflow:hidden;" >
-					<a>进度</a>
-				</li>
-				</ul> 
-				
-			</div>
-				
+				<button id="selectBtn" class="select_btn"> 启 动 </button>
+				<button id="stopBtn" class="stop_btn"> 停 止 </button>
+				<select id="area">
+					<option value="-1">请选择区</option>
+				</select>
 			
-			
-			
-			
-		</div> 
-		<div id="allmap"></div>
-	
-        <div id="chart_1" ></div>
-        <div id="chart_2" ></div>
-        
-        <div id="C3" ></div>
-        <div id="C4" ></div>
-        
 
-        
-        
-  	<div id="r-result" style="display:none;" >input:<input type="text" id="suggestId" size="20" value="Baidu" style="width:150px;" /></div>
-		<div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>      
-        
-	</body>
-    <script type="text/javascript" src="../../static/jquery/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="../../static/echarts/echarts.js"></script>
-	<script type="text/javascript" src="../../static/commonjs/citySelect.js"></script>	
-   <script src="data-get.js"></script>
-</html> 
+		</div>
+		<div class="socc" >
+			<ul>
+				<li style="overflow:hidden;">
+					<font style="color:red;">*</font>
+					<a>display real-time log in here.</a>
+				</li>
+			</ul>
+		</div>
+		<div class="soccc">
+			<ul>
+				<li style="overflow:hidden;">
+					<a>&nbsp;</a>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	<table class="table1" border="0" cellspacing="0px" cellpadding="8px">
+		<tr>
+			<td rowspan="2">
+				<div id="allmap"></div>
+			</td>
+			<td>
+				<div id="chart_1"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="chart_2"></div>
+			</td>
+		</tr>
+	</table>
+
+
+
+
+
+	<div id="r-result" style="display:none;">input:<input type="text" id="suggestId" size="20" value="Baidu" style="width:150px;" /></div>
+	<div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+
+</body>
+<script type="text/javascript" src="../../static/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../static/echarts/echarts.js"></script>
+<script type="text/javascript" src="../../static/commonjs/citySelect.js"></script>
+<script src="data-get.js"></script>
+
+</html>

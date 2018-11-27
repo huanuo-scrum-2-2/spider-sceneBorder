@@ -148,6 +148,15 @@ $(document).ready(function () {
           function vdraw_chart2(prov_name, pois_count, pois_count2) {
         var myCharts2 = echarts.init(document.getElementById('chart_1'));
         var option = {
+         title : {
+                	 	 textStyle: {
+                        fontSize: 14,             
+                        color: '#cccccc',
+                        align:5
+                },	 
+        text: 'Border量',
+        x: 'center',backgroundColor: 'rgba(0,0,0,0)'
+    },
         		color: ['#3398DB'],
             grid: {
                 top: "3%",
@@ -242,6 +251,15 @@ $(document).ready(function () {
     function vdraw_chart1(prov_name, pois_count, pois_count2) {
         var myCharts1 = echarts.init(document.getElementById('chart_2'));
         var option = {
+        	  title : {
+                       textStyle: {
+                        fontSize: 14,             
+                        color: '#cccccc',
+                        align:5
+                },	 	  	
+        text: 'Grid量',
+        x: 'center',backgroundColor: 'rgba(0,0,0,0)'
+    },
         		color: ['#3398DB'],
             grid: {
                 top: "3%",
@@ -287,7 +305,7 @@ $(document).ready(function () {
 			}
 		},
             series: [{
-			name: 'poiBorder量',
+			name: 'Grid总量',
 			type: 'bar',
 			barWidth: '30%',
 			data: pois_count,
@@ -317,7 +335,7 @@ $(document).ready(function () {
 		
 		
                 {
-                    name: 'poi量',
+                    name: 'Grid完成量',
                      data: pois_count2,
                     //data: ['1','2'],
                     type: 'line',
@@ -651,6 +669,17 @@ $('#selectBtn').click(function () {
     function vdraw_chart2(prov_name, pois_count, pois_count2) {
         var myCharts2 = echarts.init(document.getElementById('chart_1'));
          var option = {
+         	  title : {
+         	  	
+             	 	 textStyle: {
+                        fontSize: 14,             
+                        color: '#cccccc',
+                        align:5
+                },	   
+         	  	
+        text: 'Border量',
+         x: 'center',backgroundColor: 'rgba(0,0,0,0)'
+    },
         		color: ['#3398DB'],
             grid: {
                 top: "3%",
@@ -745,6 +774,15 @@ $('#selectBtn').click(function () {
     function vdraw_chart1(prov_name, pois_count, pois_count2) {
         var myCharts1 = echarts.init(document.getElementById('chart_2'));
          var option = {
+         	 title : {         	 	
+         	 	 textStyle: {
+                        fontSize: 14,             
+                        color: '#cccccc',
+                        align:5
+                },	           	 	
+        text: 'Grid量',
+        x: 'center',backgroundColor: 'rgba(0,0,0,0)'
+    },
         		color: ['#3398DB'],
             grid: {
                 top: "3%",
@@ -886,6 +924,57 @@ $('#selectBtn').click(function () {
         //console.log(data);
     }, function (data) {
     });
+    
+function  chartshowInterval(){
+	 vgetApi(mypath.getpoisonrunning, null, function (data) {
+        var city = [];
+        var count = [];
+        var countd = [];
+        var data = JSON.parse(data);
+        for (var i = 0; i < data.length; i++) {
+            city[i] = data[i].city_name;
+            count[i] = data[i].pois_num;
+            countd[i] = data[i].pois_border_num;
+            console.log('采集场景数量 get_pois_on_running ')
+            console.log(data[i].city_name);
+            console.log(data[i].pois_num);
+            console.log(data[i].pois_border_num);
+            vdraw_chart2(city, count, countd);
+        }
+        //console.log(data);
+    }, function (data) {
+    });
+
+    vgetApi(mypath.getgridonrunning, null, function (data) {
+        var city = [];
+        var count = [];
+        var countd = [];
+        var data = JSON.parse(data);
+        for (var i = 0; i < data.length; i++) {
+            city[i] = data[i].city_name;
+            count[i] = data[i].grid_done;
+            countd[i] = data[i].grids;
+            console.log('采集边框数量 get_grid_on_running')
+            console.log(data[i].city_name);
+            console.log(data[i].grid_done);
+            console.log(data[i].grids);
+            vdraw_chart1(city, count, countd);
+        }
+        //console.log(data);
+    }, function (data) {
+    });
+	
+	}    
+    
+    
+    
+    
+    
+    setInterval(chartshowInterval,5000);    //3秒刷图
+    
+    
+    
+    
 
 
     vgetApi(mypath.getgridhadrun, null, function (data) {

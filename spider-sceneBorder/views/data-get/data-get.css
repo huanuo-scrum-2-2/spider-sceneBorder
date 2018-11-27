@@ -23,9 +23,22 @@ html {
 
 
 .content ul li{
+	margin-left:0%;
 	font-size:5px;
+	width: inherit;
 	color: black;
+	height:32px;
 }
+
+.socc {
+	width: inherit;
+	    background-color:aquamarine;
+	}
+
+.soccc{
+	width: inherit;
+	background-color:aquamarine;
+	}
 
 
 
@@ -34,6 +47,7 @@ html {
     height: 33px;
     margin: 1.5px;
     overflow:hidden;
+
 }
 .select_btn {
 	float: right;
@@ -52,19 +66,58 @@ html {
 }
 
 
+.stop_btn {
+	float: right;
+	margin: 0 40px 0 0;
+	width: 112px;
+	height: 33px;
+	border: 1px solid gainsboro;
+	background: white;
+	color: black;
+	border-radius: 3px;
+}
+
+.stop_btn :hover {
+	background: blue;
+	color: white;
+}
+
+
+
+
+
+#mc {
+	 position: absolute;
+   left: 0%;
+ color: black;
+    font-size:5px;
+    top:15%;
+}
+
+
+#mapchoosed {
+    position: absolute;
+     left: 4%;
+    width: 112px;
+    height: inherit;
+    background-color: white;
+    color: black;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
 
 
 #pr {
 	 position: absolute;
-    left: 2px;
+    left: 13%;
     color: black;
-    font-size:5px;
-    top:12px;
+    font-size:6px;
+    top:15%;
 }
 
 #province {
      position: absolute;
-    left: 32px;
+    left: 16%;
     width: 112px;
     height: inherit;
    border: 1px solid gainsboro;
@@ -75,18 +128,20 @@ html {
 
 
 
+
+
 #cy {
 	 position: absolute;
-    left: 150px;
+    left: 25%;
   color: black;
-    font-size:5px;
-    top:12px;
+    font-size:6px;
+    top:15%;
     
 }
 
 #city {
     position: absolute;
-    left: 180px;
+    left: 28%;
     width: 112px;
     height: inherit;
 
@@ -103,14 +158,14 @@ html {
 
 #so {
 	 position: absolute;
-    left: 300px;
+    left: 37%;
    color: black;
-    font-size:5px;
-    top:12px;
+    font-size:6px;
+    top:15%;
 }
 #scenario {
     position: absolute;
-    left: 355px;
+    left: 42%;
    width: 112px;
     height: inherit;
     	background: white;
@@ -122,25 +177,7 @@ html {
 
 
 
-#mc {
-	 position: absolute;
-    left: 478px;
- color: black;
-    font-size:5px;
-    top:12px;
-}
 
-
-#mapchoosed {
-    position: absolute;
-    left: 520px;
-    width: 112px;
-    height: inherit;
-    background-color: white;
-    color: black;
-    border: 1px solid gainsboro;
-    border-radius: 3px;
-}
 
 
 #chart_1 {
