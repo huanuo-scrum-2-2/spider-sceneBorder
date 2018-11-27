@@ -12,6 +12,10 @@ html {
     list-style-type:none
 }
 
+
+
+
+
 .content {
    margin: 70px 0 0 1%;
     width: 98%;
@@ -49,6 +53,17 @@ html {
     overflow:hidden;
 
 }
+.stop_btn{
+	float: right;
+	margin: 0 40px 0 0;
+	width: 112px;
+	height: 33px;
+	border: 1px solid gainsboro;
+	background: white;
+	color: black;
+	border-radius: 3px;
+}
+
 .select_btn {
 	float: right;
 	margin: 0 40px 0 0;
@@ -60,22 +75,14 @@ html {
 	border-radius: 3px;
 }
 
+
 .select_btn :hover {
 	background: blue;
 	color: white;
 }
 
 
-.stop_btn {
-	float: right;
-	margin: 0 40px 0 0;
-	width: 112px;
-	height: 33px;
-	border: 1px solid gainsboro;
-	background: white;
-	color: black;
-	border-radius: 3px;
-}
+
 
 .stop_btn :hover {
 	background: blue;
@@ -176,8 +183,23 @@ html {
 
 
 
+#chart_11 {
+    position: inherit;
+    top: 12%;
+    left: 1%;
+    width: 98%;
+    height: 88%;
 
+}
 
+#chart_22 {
+    position: inherit;
+    top: 12%;
+    left: 1%;
+    width: 98%;
+    height: 88%;
+
+}
 
 
 #chart_1 {

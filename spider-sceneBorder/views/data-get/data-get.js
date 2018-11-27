@@ -146,17 +146,9 @@ $(document).ready(function () {
     };
         
           function vdraw_chart2(prov_name, pois_count, pois_count2) {
-        var myCharts2 = echarts.init(document.getElementById('chart_1'));
+        var myCharts2 = echarts.init(document.getElementById('chart_11'));
         var option = {
-         title : {
-                	 	 textStyle: {
-                        fontSize: 14,             
-                        color: '#cccccc',
-                        align:5
-                },	 
-        text: 'Border量',
-        x: 'center',backgroundColor: 'rgba(0,0,0,0)'
-    },
+
         		color: ['#3398DB'],
             grid: {
                 top: "3%",
@@ -249,17 +241,9 @@ $(document).ready(function () {
 
 
     function vdraw_chart1(prov_name, pois_count, pois_count2) {
-        var myCharts1 = echarts.init(document.getElementById('chart_2'));
+        var myCharts1 = echarts.init(document.getElementById('chart_22'));
         var option = {
-        	  title : {
-                       textStyle: {
-                        fontSize: 14,             
-                        color: '#cccccc',
-                        align:5
-                },	 	  	
-        text: 'Grid量',
-        x: 'center',backgroundColor: 'rgba(0,0,0,0)'
-    },
+        	 
         		color: ['#3398DB'],
             grid: {
                 top: "3%",
@@ -667,19 +651,9 @@ $('#selectBtn').click(function () {
 
 
     function vdraw_chart2(prov_name, pois_count, pois_count2) {
-        var myCharts2 = echarts.init(document.getElementById('chart_1'));
+        var myCharts2 = echarts.init(document.getElementById('chart_11'));
          var option = {
-         	  title : {
-         	  	
-             	 	 textStyle: {
-                        fontSize: 14,             
-                        color: '#cccccc',
-                        align:5
-                },	   
-         	  	
-        text: 'Border量',
-         x: 'center',backgroundColor: 'rgba(0,0,0,0)'
-    },
+         	 
         		color: ['#3398DB'],
             grid: {
                 top: "3%",
@@ -772,17 +746,9 @@ $('#selectBtn').click(function () {
 
 
     function vdraw_chart1(prov_name, pois_count, pois_count2) {
-        var myCharts1 = echarts.init(document.getElementById('chart_2'));
+        var myCharts1 = echarts.init(document.getElementById('chart_22'));
          var option = {
-         	 title : {         	 	
-         	 	 textStyle: {
-                        fontSize: 14,             
-                        color: '#cccccc',
-                        align:5
-                },	           	 	
-        text: 'Grid量',
-        x: 'center',backgroundColor: 'rgba(0,0,0,0)'
-    },
+         	
         		color: ['#3398DB'],
             grid: {
                 top: "3%",
